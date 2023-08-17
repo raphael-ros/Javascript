@@ -6,13 +6,13 @@
  * @param {number} height - The height of the pyramid
  */
 export default class Pyramid {
-  constructor (bsl, height) {
-    this.bsl = bsl
+  constructor (baseLength, height) {
+    this.base = baseLength
     this.height = height
   }
 
   baseArea = () => {
-    return Math.pow(this.bsl, 2)
+    return Math.pow(this.baseLength, 2)
   }
 
   volume = () => {
@@ -20,6 +20,6 @@ export default class Pyramid {
   }
 
   surfaceArea = () => {
-    return this.baseArea() + this.bsl * 4 / 2 * Math.sqrt(Math.pow(this.bsl / 2, 2) + Math.pow(this.height, 2))
+    return this.baseArea() + this.baseLength * 4 / 2 * Math.sqrt(Math.pow(this.baseLength / 2, 2) + Math.pow(this.height, 2))
   }
 }
